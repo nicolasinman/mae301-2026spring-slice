@@ -1,5 +1,4 @@
-#
-Objective and Current MVP Approach
+#Objective and Current MVP Approach
 
 The final MVP will use an AI-driven system to help everyday investors interpret social media posts made by politically or financially influential people and understand how those posts may relate to the movement of the stock market. Being able to understand whether a post is meaningful, what type of market signal it may contain, and whether it may or may not influence an investor's financial decisions is a very difficult skill to master and is impossible to effective when a human can only read so many posts in a given timeframe. With the prevalence of social media, many important public figures communicate their strong opinions, intentions, or hints at policy changes through short online posts. For the average investor, it is extremely difficult to manually track this information to judge its relevance and analyze the effect it may or may not have on market behavior.
 
