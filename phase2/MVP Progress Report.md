@@ -1,12 +1,11 @@
-#
 Objective and Current MVP Approach
-##
+#
 The final MVP will use an AI-driven system to help everyday investors interpret social media posts made by politically or financially influential people and understand how those posts may relate to the movement of the stock market. Being able to understand whether a post is meaningful, what type of market signal it may contain, and whether it may or may not influence an investor's financial decisions is a very difficult skill to master and is impossible to effective when a human can only read so many posts in a given timeframe. With the prevalence of social media, many important public figures communicate their strong opinions, intentions, or hints at policy changes through short online posts. For the average investor, it is extremely difficult to manually track this information to judge its relevance and analyze the effect it may or may not have on market behavior.
 
 The current approach for the final MVP focuses on creating a small-scale prototype that addresses the earliest stages of that pipeline, converting text into structured numerical data. During this early stage of development, the system will not yet make real market predictions from live political posts, nor does it analyze a full portfolio. Instead, the MVP demonstrates that public statements can be processed automatically and transformed into a data matrix that a computer can later use for mathematical modeling. In its current form, the prototype reads text from a file, separates it into blocks, and produces basic measurable outputs such as word count, emotional-word count, and sentiment score. This MVP is intentionally narrow so the team can validate the text-analysis concept before expanding into data collection, stock-price correlation, and forecasting.
-
+#
 What Has Been Built So Far
-
+#
 Currently, a working text analysis prototype has been developed in Python. The program takes a text file as input, reads the contents, separates the text into multiple blocks using blank lines, and analyzes each block individually. For every block of text, the prototype calculates the total number of words, extracts a short list of key phrases using TextBlob, estimates how many words are emotionally charged using the VADER lexicon, and assigns a sentiment score using a pretrained transformer sentiment model. These outputs are then stored as data points and assembled into a numerical matrix that can be used later for modeling or comparison.
 
 This proves that qualitative language can be converted into quantitative features. Rather than leaving posts as raw text, the system begins translating them into a form that can be compared, plotted, and eventually correlated with stock movement. The sample output demonstrates that different text blocks generate different feature values, meaning the program is already detecting variation in sentiment and structure. Even though the test inputs are simple and not yet financial or political in nature, the prototype establishes the underlying workflow that future versions of the MVP will rely on: input text, analyze content, extract features, and output machine-readable data.
