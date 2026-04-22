@@ -1,10 +1,11 @@
 ### PLEASE READ!!!
 
 MVP is meant to scrape data from twitter, then convert and analyze into usable information.
-HOWEVER, actively running a scraped costs a subscription fee.
+HOWEVER, actively running a scraper costs a subscription fee.
 Therefore - to test the program, we will have 2 data sets: exampledata, sampledata
 
-Example data will contain manufactured tweets from imaginary people which is written specifically to be good data for our program.
+# Example data 
+will contain manufactured tweets from imaginary people which is written specifically to be good data for our program.
 
 Ex. 
 person1 can accuratly predict when stocks will rise/fall
@@ -15,7 +16,8 @@ Ex. person1 tweet: "xx/yy/20zz S&P500 is totally gonna go up"
 
 Certain tweets from example people will be unrelated to S&P500, eg "I got a cat today". This will demonstrate our ability to filter by keywords.
 
-
+# Sample data (optional)
+will contain a couple sets of real tweets manually copied from twitter for true testing
 
 
 
