@@ -9,8 +9,11 @@ will contain manufactured tweets from imaginary people which is written specific
 
 Ex. 
 person1 can accuratly predict when stocks will rise/fall
+
 person2 is always perfectly wrong in their predictions
+
 person3 is randomly correct/incorrect
+
 
 Ex. person1 tweet: "xx/yy/20zz S&P500 is totally gonna go up"
 
