@@ -43,7 +43,7 @@ Within the Phase 3 folder, there are two scrapers: one for extracting posts from
 
 04/23/2026 Another example Threads post text here
 ```
-- 
+ 
   Step 4: From here, the .txt can be parsed in a separate program and used for analysis and correlation with stock market data.
 
   Future Modifications: Rather than the individual manually entering the names of each individual, a matrix of influential individuals formated in a .txt document could be read by the program and outputted to a .txt with the exact same structure as before.
