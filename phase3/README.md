@@ -38,11 +38,14 @@ Within the Phase 3 folder, there are two scrapers: one for extracting posts and 
 
   Step 3: The program outputs the post text, like count, reply count, repost count, and post creation date into a .txt with each post separated into a new line. The following is the format of the output .txt:
 
-  Text: Example Threads post text here
+  ```txt
+Text: Example Threads post text here
 Likes: 124
 Replies: 8
 Reposts: 3
 Created: 2026-04-24T12:34:56Z
+--------------------------------------------------------------------------------
+```
 
   Step 4: The .txt is saved for later use in analysis and correlation with stock market data.
 
