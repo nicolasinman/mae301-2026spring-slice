@@ -50,7 +50,9 @@ Within the Phase 3 folder, there are two scrapers: one for extracting posts from
 
 - ### Scraper Requirements
   - **X Scraper**
- 
+    Programming Language: Python
+    Libraries: 
   - **Instagram Threads Scraper**
+    Programming Language: Python
 
 ## Text Analysis Overview
