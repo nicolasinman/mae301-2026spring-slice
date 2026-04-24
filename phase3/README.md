@@ -36,13 +36,10 @@ Within the Phase 3 folder, there are two scrapers: one for extracting posts and 
 
   Step 2: Program opens Threads account and examines the last "X" # of posts by this individual. (NOTE: Only extracts text)
 
-  Step 3: The program outputs the post text, like count, reply count, repost count, and post creation date into a .txt with the name "threads_posts_ThreadsUsername.txt". The following is the format of the output .txt:
+  Step 3: The program outputs the post text and post creation date into a .txt with the name "threads_posts_ThreadsUsername.txt". The following is the format of the output .txt:
 
 ```txt
 Text: Example Threads post text here
-Likes: 124
-Replies: 8
-Reposts: 3
 Created: 2026-04-24T12:34:56Z
 ```
   
