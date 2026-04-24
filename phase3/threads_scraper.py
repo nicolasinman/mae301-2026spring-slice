@@ -39,11 +39,21 @@ def load_threads_usernames(filename: str = "threads_usernames_verified.txt") -> 
 
 
 def format_post_data(post: Dict[str, Any]) -> str:
-    """Format a single post's text and creation date on one line."""
+    """Format a single post as mm/dd/yyyy text."""
     text = post.get('text', 'N/A')
-    created = post.get('created_at', 'N/A')
+    created = post.get('created_at', '')
 
-    return f"Text: {text} | Created: {created}"
+    if created:
+        try:
+            date_only = created.split("T")[0]
+            year, month, day = date_only.split("-")
+            formatted_date = f"{month}/{day}/{year}"
+        except:
+            formatted_date = "N/A"
+    else:
+        formatted_date = "N/A"
+
+    return f"{formatted_date} {text}"
 
 
 def fetch_threads_posts(
@@ -184,7 +194,7 @@ def scrape_and_export(
         with open(output_filename, 'w', encoding='utf-8') as f:
             for post in posts:
                 f.write(format_post_data(post))
-                f.write("\n")
+                f.write("\n\n")
 
         print(f"✓ Successfully exported {len(posts)} posts to {output_filename}")
 
