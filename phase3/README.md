@@ -32,7 +32,7 @@ Within the Phase 3 folder, there are two scrapers: one for extracting posts from
 - ### Scraper Program Procedure
   The current program that was created and placed in the GitHub repository for scraping X posts makes use of an older Twitter scraper that worked before Twitter became X and began requiring a paid  subscription for API access. Due to this API restriction, the program cannot extract data from X and serves solely as a prove-of-concept. Similarly to the X scraper program, the Instagram Threads scraper is limited in its access to the Threads API; however, this program is a more in-depth look at what a successful model would actually accomplish. The Threads program is fully capable of naviagting to the URL where the required information would be extracted; however, it cannot extract the data without the proper API access. Thus, the following information is purely descriptive of the program procedure and the results that would be achieved if the team were given API tools from these social media platforms.
 
-  <u>Step 1:</u> User runs script with python threads_scraper.py ThreadsUsername
+  **Step 1:** User runs script with python threads_scraper.py ThreadsUsername
 
   Step 2: Program opens Threads account and examines the last "X" # of posts by this individual. (NOTE: Only extracts text)
 
