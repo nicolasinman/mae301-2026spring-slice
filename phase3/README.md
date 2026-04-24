@@ -34,9 +34,9 @@ Within the Phase 3 folder, there are two scrapers: one for extracting posts from
 
   **Step 1:** User runs script with python threads_scraper.py ThreadsUsername
 
-  Step 2: Program opens Threads account and examines the last "X" # of posts by this individual. (NOTE: Only extracts text)
+  **Step 2:** Program opens Threads account and examines the last "X" # of posts by this individual. (NOTE: Only extracts text)
 
-  Step 3: The program outputs the post text and post creation date into a .txt with the name "threads_posts_ThreadsUsername.txt". The following is the format of the output .txt:
+  **Step 3:** The program outputs the post text and post creation date into a .txt with the name "threads_posts_ThreadsUsername.txt". The following is the format of the output .txt:
 
   ```txt
   04/24/2026 Example Threads post text here
@@ -44,6 +44,6 @@ Within the Phase 3 folder, there are two scrapers: one for extracting posts from
   04/23/2026 Another example Threads post text here
   ```
  
-  Step 4: From here, the .txt can be parsed in a separate program and used for analysis and correlation with stock market data.
+  **Step 4:** From here, the .txt can be parsed in a separate program and used for analysis and correlation with stock market data. <u>This text is underlined</u>
 
-  Future Modifications: Rather than the individual manually entering the names of each individual, a matrix of influential individuals formated in a .txt document (like the one shown in the Phase 3 folder) could be read by the program and outputted to multiple .txt files with the exact same structure as before.
+  **Future Modifications:** Rather than the individual manually entering the names of each individual, a matrix of influential individuals formated in a .txt document (like the one shown in the Phase 3 folder) could be read by the program and outputted to multiple .txt files with the exact same structure as before.
