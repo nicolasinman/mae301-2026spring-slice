@@ -47,3 +47,5 @@ Within the Phase 3 folder, there are two scrapers: one for extracting posts from
   <ins>**Step 4:**</ins> From here, the .txt can be parsed in a separate program and used for analysis and correlation with stock market data.
 
   <ins>**Future Modifications:**</ins> Rather than the individual manually entering the names of each individual, a matrix of influential individuals formated in a .txt document (like the one shown in the Phase 3 folder) could be read by the program and outputted to multiple .txt files with the exact same structure as before.
+
+## Text Analysis Overview
