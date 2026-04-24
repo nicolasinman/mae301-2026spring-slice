@@ -32,7 +32,7 @@ Within the Phase 3 folder, there are two scrapers: one for extracting posts from
 - ### Scraper Program Procedure
   The current program that was created and placed in the GitHub repository for scraping X posts makes use of an older Twitter scraper that worked before Twitter became X and began requiring a paid  subscription for API access. Due to this API restriction, the program cannot extract data from X and serves solely as a prove-of-concept. Similarly to the X scraper program, the Instagram Threads scraper is limited in its access to the Threads API; however, this program is a more in-depth look at what a successful model would actually accomplish. The Threads program is fully capable of naviagting to the URL where the required information would be extracted; however, it cannot extract the data without the proper API access. Thus, the following information is purely descriptive of the program procedure and the results that would be achieved if the team were given API tools from these social media platforms.
 
-  **Step 1:** User runs script with python threads_scraper.py ThreadsUsername
+  <ins>**Step 1:**</ins> User runs script with python threads_scraper.py ThreadsUsername
 
   **Step 2:** Program opens Threads account and examines the last "X" # of posts by this individual. (NOTE: Only extracts text)
 
@@ -44,6 +44,6 @@ Within the Phase 3 folder, there are two scrapers: one for extracting posts from
   04/23/2026 Another example Threads post text here
   ```
  
-  **Step 4:** From here, the .txt can be parsed in a separate program and used for analysis and correlation with stock market data. <u>This text is underlined</u>
+  **Step 4:** From here, the .txt can be parsed in a separate program and used for analysis and correlation with stock market data.
 
   **Future Modifications:** Rather than the individual manually entering the names of each individual, a matrix of influential individuals formated in a .txt document (like the one shown in the Phase 3 folder) could be read by the program and outputted to multiple .txt files with the exact same structure as before.
