@@ -39,7 +39,9 @@ Within the Phase 3 folder, there are two scrapers: one for extracting posts from
   Step 3: The program outputs the post text and post creation date into a .txt with the name "threads_posts_ThreadsUsername.txt". The following is the format of the output .txt:
 
 ```txt
-Text: Example Threads post text here | Created: 2026-04-24T12:34:56Z
+04/24/2026 Example Threads post text here
+
+04/23/2026 Another example Threads post text here
 ```
   
   Step 4: From here, the .txt can be parsed in a separate program and used for analysis and correlation with stock market data.
