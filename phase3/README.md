@@ -48,4 +48,9 @@ Within the Phase 3 folder, there are two scrapers: one for extracting posts from
 
   <ins>**Future Modifications:**</ins> Rather than the individual manually entering the names of each individual, a matrix of influential individuals formated in a .txt document (like the one shown in the Phase 3 folder) could be read by the program and outputted to multiple .txt files with the exact same structure as before.
 
+- ### Scraper Requirements
+  - **X Scraper**
+ 
+  - **Instagram Threads Scraper**
+
 ## Text Analysis Overview
