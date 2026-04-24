@@ -36,7 +36,7 @@ Within the Phase 3 folder, there are two scrapers: one for extracting posts and 
 
   Step 2: Program opens Threads account and examines the last "X" # of posts by this individual. (NOTE: Only extracts text)
 
-  Step 3: The program outputs the post text, like count, reply count, repost count, and post creation date into a .txt with each post separated into a new line. The following is the format of the output .txt:
+  Step 3: The program outputs the post text, like count, reply count, repost count, and post creation date into a .txt with the name "threads_posts_ThreadsUsername.txt". The following is the format of the output .txt:
 
 ```txt
 Text: Example Threads post text here
@@ -45,7 +45,7 @@ Replies: 8
 Reposts: 3
 Created: 2026-04-24T12:34:56Z
 ```
-
-  Step 4: The .txt is saved for later use in analysis and correlation with stock market data.
+  
+  Step 4: From here, the .txt can be parsed in a separate program and used for analysis and correlation with stock market data.
 
   Future Modifications: Rather than the individual manually entering the names of each individual, a matrix of influential individuals formated in a .txt document could be read by the program and outputted to a .txt with the exact same structure as before.
