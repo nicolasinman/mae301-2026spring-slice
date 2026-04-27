@@ -56,3 +56,7 @@ Within the Phase 3 folder, there are two scrapers: one for extracting posts from
     Programming Language: Python
 
 ## Text Analysis Overview
+Text analysis is called in the terminal using : python textanalysisfinal.py yourtextfilename.txt
+It analyzes the text file as chunks and converts them into data points measuring various attributes using AI to accuratly read and interperet.
+Currently, only keywords and sentiment score are used to calculate final result.
+Depending on how the data compares to a reference market_data.csv file, it outputs a judgment on whether or not the selected use is a reliable indicator of the S&P500.
