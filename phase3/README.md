@@ -62,4 +62,4 @@ It analyzes the text file as chunks and converts them into data points measuring
 
 Currently, only keywords and sentiment score are used to calculate final result.
 
-Depending on how the data compares to a reference market_data.csv file, it outputs a judgment on whether or not the selected use is a reliable indicator of the S&P500.
+Depending on how the data compares to a reference market_data.csv file, it outputs a judgment on whether or not the selected user is a reliable indicator of the S&P500.
