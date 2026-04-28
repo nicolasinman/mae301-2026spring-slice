@@ -12,7 +12,98 @@ Usage case: A user wants to evaluate whether a political commentator's statement
 
 #
 # System Design
-
+         ┌────────────────────┐        ┌─────────────────────┐             
+         │                    │        │                     │             
+         │    [X / Threads]   │        │[S&P 500 Market Data]│             
+         │                    │        │                     │             
+         │ Web Scrapers:      │        └───────────┬─────────┘             
+         │ x_scraper.py       │                    │                       
+         │ threads_scraper.py │                    │                       
+         └─────────┬──────────┘                    │                       
+                   │                               │                       
+                   │                               │                       
+                   └─────────────────┬─────────────┘                       
+                                     │                                     
+                                     │                                     
+                                     │                                     
+                                     │                                     
+                                     │                                     
+          ┌──────────────────────────▼──────────────────────────┐          
+          │                  textanalysisfinal.py               │          
+          │┌───────────────────────────────────────────────────┐│          
+          ││TOOL 1: VADER                                      ││          
+          ││pre-built dictionary of scored words               ││          
+          ││checks each word in the post against the dictionary││          
+          ││output --> emotional word count                    ││          
+          │└─────────────────────────┬─────────────────────────┘│          
+          │                          │                          │          
+          │                          │                          │          
+          │┌─────────────────────────▼─────────────────────────┐│          
+          ││TOOL 2: DistilBERT (pretrained AI model)           ││          
+          ││reads the entire post as a full sentence           ││          
+          ││understands context, not just single words         ││          
+          ││input  --> raw post text                           ││          
+          ││output --> sentiment score (+/-)                   ││          
+          ││e.g. +0.97 or -0.85                                ││          
+          │└─────────────────────────┬─────────────────────────┘│          
+          │                          │                          │          
+          │                          │                          │          
+          │┌─────────────────────────▼─────────────────────────┐│          
+          ││TOOL 3: TextBlob                                   ││          
+          ││identifies noun phrases in the post                ││          
+          ││e.g. "s&p500", "stock market"                      ││          
+          ││output --> keyword list                            ││          
+          │└───────────────────────────────────────────────────┘│          
+          │                                                     │          
+          └──────────────────────────┬──────────────────────────┘          
+                                     │                                     
+                                     │                                     
+┌────────────────────────────────────▼──────────────────────────────────┐  
+│                       Feature Matrix Assembly                         │  
+│                                                                       │  
+│Outputs from all 3 tools combined into one data point per post         │  
+│all data points assembled into NumPy matrix                            │  
+│                                                                       │  
+│full feature matrix (all posts):                                       │  
+│[date | word count | emotional word count | sentiment score | keywords]│  
+│                                                                       │  
+│S&P500-filtered submatrix (market-relevant posts only):                │  
+│[date | sentiment score]                                               │  
+│posts without S&P500 noun phrase are dropped here                      │  
+└────────────────────────────────────┬──────────────────────────────────┘  
+                                     │                                     
+                                     │                                     
+        ┌────────────────────────────▼─────────────────────────────┐       
+        │                       Regression                         │       
+        │                                                          │       
+        │ final matched matrix fed into LSRL calculation via NumPy │       
+        │ x = sentiment score (what the person said)               │       
+        │ y = market direction (what the market did)               │       
+        │                                                          │       
+        │ mean-centered deviations calculated for x and y          │       
+        │ slope = cross-product sum / sum of squared x deviations  │       
+        │ r     = Pearson correlation coefficient                  │       
+        │ r^2   = coefficient of determination                     │       
+        │                                                          │       
+        └────────────────────────────┬─────────────────────────────┘       
+                                     │                                     
+                                     │                                     
+  ┌──────────────────────────────────▼────────────────────────────────────┐
+  │ 2^2 and slope thresholds applied to produce plain-English label       │
+  │                                                                       │
+  │ r^2 < 0.3              --> "probably an unreliable predictor of S&P500│
+  │ r^2 >= 0.3 and < 0.7   --> "may be a good predictor of S&P500"        │
+  │ r^2 >= 0.7             --> "great predictor of S&P500"                │
+  │ slope < 0              --> label becomes "negative predictor"         │
+  │                                                                       │
+  └──────────────────────────────────┬────────────────────────────────────┘
+                                     │                                     
+                                     │                                     
+                  ┌──────────────────▼──────────────┐                      
+                  │ final output printed to console:│                      
+                  │                                 │                      
+                  │      plain-English verdict      │                      
+                  └─────────────────────────────────┘                      
 #
 # Data
 Sources: Currently there are two sources of data that can be utilized. Post data from either X or Threads can be collected. Market data comes from a structured file containing daily S&P 500 direction labels keyed by date.m
