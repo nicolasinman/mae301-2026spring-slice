@@ -23,3 +23,61 @@ Cleaning: Text that is conventionally structured should prove no issue for the c
 
 Splits: The system performs correlation analysis rather than training a predictive model, so no train/test split is applied. The regression is computed over all available matched data points. 
 
+#
+# Models
+The system used several pre-trained, specialized models and workflow strategies to provide
+comprehensive analysis of social media post. Some of the pre-trained models used include Vader,
+TextBlob, and distilBert. These are to analyze social media, extract noun phrases and binary
+sentiment classification. The supervised statistical models used include least squares regression
+line and mathematical modeling; these include finding the relationship between the sentiment
+score and the S&amp;P 500 market directions and to determine if a person is reliable “predictor” for
+said market movement. The workflow and its strategies were designed through a multi-
+dimensional approach; first using Lexical Density to count specific “emotional” words via Vader,
+Contextual Sentiment to understand the polarity/confidence of the statement by DistilBert, and
+Keyword Filtering to filter for “S&amp;P500” relevance before the data is inputted into the matrix
+(via TextBlob). There was very few fine-tuning performed as the model uses an already fined-
+tuned of SST-2. For prompting, the system did not use Generative AI prompting, but rather
+programmatic parsing.
+
+#
+# Evaluation
+In evaluating this system, for its quantitative metrics it evaluates the influencer’s signal
+effectiveness using standard statistical measures derived from text sentiment and market
+direction correlation. This is accomplished through find the coefficient of determination
+measuring the how much variance in the S&amp;P500 direction can be explained by the influencer. If
+a strong relationship, given a score &gt;0.7, if weak, &lt;0.3. Then it finds the correlation coefficient to
+find the strength and direction of the linear relationship; positive slope equals the person being a
+“leading indicator” and vise versa for a negative slope. Thirdly, the system uses lexical density to
+filter out posts that lack actionable importance. Possible errors analyzed includes any sarcasm
+and slang which DistilBert and Vader can misinterpret and contextual blindness in which a post
+can have a neutral score while containing high-impact views.
+
+#
+# Limitations &amp; Risks
+
+Some of the biggest failure modes include an inability to recognize slang/sarcasm; models like
+SST-2 trained on movie reviews may interpret negative phrases as positive based on their
+structure. Financial markets also tend to react the most to neutral-toned data; if the system is to
+look at the creditability of the data through its positive and negative tone, it may leave out critical
+data. Beyond the nature of the market, influencers may post passed 5:00pm in which the market
+has closed. Some biases of this model include the general-purpose nature of DistilBERT and
+Vader overlooking critical financial twitter post from nuances. Having small samples sizes can
+encourage confirmation bias by “finding” great predictors through statistical coincidence. Some
+data issues include unrelated influencer posts like “Memes and lunch posts” will inevitably leak
+the data matrix which can dilute the correlation. X and Threads also have constrictions when
+extracting APIs which can prevent the model from learning the “noise” of social media posts.
+Some privacy and ethical concerns include automated scraping can violate platform TOS, the
+idea of a tool encouraging reactive trading can influence the market.
+
+#
+# Next Steps
+If the team were to have two to three more months to further develop this model, the first action
+would be to replace the basic DistilBERT with the much more sophisticated FinBERT that is
+more in line with financial corpora. Next, implementing a Time-Lagged Cross-Correlation
+function in the analysis to better turn the model into a predictive tool. It would also be prudent to
+add a “weight” variable to differentiate the creditability/importance of posts. For the “physical”
+or viewable aspect of the model, visible graphs like scatter plots and heatmaps can show the user
+the sentiment vs. price change and what influencers have the highest r^2 values. Having
+transparent data will allow the user to fact check the model’s predictions and therefore increase
+user trust.
+
