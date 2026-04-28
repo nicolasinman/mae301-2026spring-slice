@@ -46,8 +46,6 @@ Person1 tweet: "xx/yy/20zz S&P500 is totally gonna go up"
 
 Certain tweets from example people will be unrelated to S&P500, eg "I got a cat today". This will demonstrate our ability to filter by keywords.
 
-### Sample data (optional)
-will contain a couple sets of real tweets manually copied from twitter for true testing
 
 ## Text Analysis Overview
 Text analysis is called in the terminal using : python textanalysisfinal.py yourtextfilename.txt
