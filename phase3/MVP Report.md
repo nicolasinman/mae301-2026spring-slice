@@ -12,6 +12,8 @@ Usage case: A user wants to evaluate whether a political commentator's statement
 
 #
 # System Design
+
+```
          ┌────────────────────┐        ┌─────────────────────┐             
          │                    │        │                     │             
          │    [X / Threads]   │        │[S&P 500 Market Data]│             
@@ -103,7 +105,9 @@ Usage case: A user wants to evaluate whether a political commentator's statement
                   │ final output printed to console:│                      
                   │                                 │                      
                   │      plain-English verdict      │                      
-                  └─────────────────────────────────┘                      
+                  └─────────────────────────────────┘    
+```
+
 #
 # Data
 Sources: Currently there are two sources of data that can be utilized. Post data from either X or Threads can be collected. Market data comes from a structured file containing daily S&P 500 direction labels keyed by date.m
