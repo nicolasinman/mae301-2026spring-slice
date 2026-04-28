@@ -7,14 +7,16 @@ Therefore - to test the program, we will have 2 data sets: exampledata, sampleda
 ### Example data 
 Contains manufactured tweets from imaginary people which is written specifically to be good data for our program.
 
-Ex. 
+<ins>Ex.</ins>
 Person1 can accuratly predict when stocks will rise/fall
 
 Person2 is always perfectly wrong in their predictions
 
 Person3 is randomly correct/incorrect
 
-Ex. person1 tweet: "xx/yy/20zz S&P500 is totally gonna go up"
+<ins>Ex.</ins> 
+
+Person1 tweet: "xx/yy/20zz S&P500 is totally gonna go up"
 
 Certain tweets from example people will be unrelated to S&P500, eg "I got a cat today". This will demonstrate our ability to filter by keywords.
 
