@@ -45,7 +45,7 @@ Contains manufactured tweets from imaginary people which is written specifically
 
 - Person1 tweet: "xx/yy/20zz S&P500 is totally gonna go up"
 
-Certain tweets from example people will be unrelated to S&P500, eg "I got a cat today". This will demonstrate our ability to filter by keywords.
+Certain tweets from example people will be unrelated to S&P500, e.g. "I got a cat today". This will demonstrate our ability to filter by keywords.
 
 
 ## Text Analysis Overview
