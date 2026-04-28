@@ -91,7 +91,7 @@ Usage case: A user wants to evaluate whether a political commentator's statement
                                      │                                     
                                      │                                     
   ┌──────────────────────────────────▼────────────────────────────────────┐
-  │ 2^2 and slope thresholds applied to produce plain-English label       │
+  │           Thresholds applied to produce plain-English label           │
   │                                                                       │
   │ r^2 < 0.3              --> "probably an unreliable predictor of S&P500│
   │ r^2 >= 0.3 and < 0.7   --> "may be a good predictor of S&P500"        │
@@ -102,9 +102,12 @@ Usage case: A user wants to evaluate whether a political commentator's statement
                                      │                                     
                                      │                                     
                   ┌──────────────────▼──────────────┐                      
-                  │ final output printed to console:│                      
+                  │       Final output printed:     │                      
                   │                                 │                      
-                  │      plain-English verdict      │                      
+                  │      Plain-English verdict:     |
+                  |         "great predictor"       |
+                  |         "good predictor"        |
+                  |           "unreliable"          |
                   └─────────────────────────────────┘    
 ```
 
