@@ -35,11 +35,11 @@ Within the Phase 3 folder, there are two scrapers: one for extracting posts from
 Contains manufactured tweets from imaginary people which is written specifically to be good data for our program.
 
 <ins>Ex.</ins>
-Person1 can accuratly predict when stocks will rise/fall
+- Person1 can accuratly predict when stocks will rise/fall
 
-Person2 is always perfectly wrong in their predictions
+- Person2 is always perfectly wrong in their predictions
 
-Person3 is randomly correct/incorrect
+- Person3 is randomly correct/incorrect
 
 <ins>Ex.</ins> 
 
@@ -49,6 +49,7 @@ Certain tweets from example people will be unrelated to S&P500, eg "I got a cat 
 
 
 ## Text Analysis Overview
+
 Text analysis is called in the terminal using : python textanalysisfinal.py yourtextfilename.txt
 
 It analyzes the text file as chunks and converts them into data points measuring various attributes using AI to accuratly read and interperet.
@@ -56,3 +57,7 @@ It analyzes the text file as chunks and converts them into data points measuring
 Currently, only keywords and sentiment score are used to calculate final result.
 
 Depending on how the data compares to a reference market_data.csv file, it outputs a judgment on whether or not the selected user is a reliable indicator of the S&P500.
+
+- ### Analysis Program Requirements
+    - Programming Language: Python
+    - Libraries: numpy, nltk, transformers, textblob, torch
