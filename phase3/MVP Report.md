@@ -15,7 +15,7 @@ Usage case: A user wants to evaluate whether a political commentator's statement
 
 #
 # Data
-Sources: Currently there are two sources of data that can be utilized. Post data from either X or Threads can be collected. Market data comes from market_data.csv, a structured file containing daily S&P 500 direction labels keyed by date in mm/dd/yyyy format. 
+Sources: Currently there are two sources of data that can be utilized. Post data from either X or Threads can be collected. Market data comes from
 
 Size: The system is designed to operate on post histories spanning weeks to months per individual, paired with a corresponding window of daily market data. In practice, a meaningful corpus would consist of hundreds of dated posts per tracked account.
 
