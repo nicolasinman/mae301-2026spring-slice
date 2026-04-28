@@ -26,9 +26,10 @@ Within the Phase 3 folder, there are two scrapers: one for extracting posts from
 - ### Scraper Requirements
   - **X Scraper**
     - Programming Language: Python
-    - Libraries: 
+    - Libraries: twint
   - **Instagram Threads Scraper**
-    Programming Language: Python
+    - Programming Language: Python
+    - Libraries: selenium, beautifulsoup4, webdriver-manager
 
 ## Example data 
 Contains manufactured tweets from imaginary people which is written specifically to be good data for our program.
