@@ -58,6 +58,6 @@ Currently, only keywords and sentiment score are used to calculate final result.
 
 Depending on how the data compares to a reference market_data.csv file, it outputs a judgment on whether or not the selected user is a reliable indicator of the S&P500.
 
-- ### Analysis Program Requirements
+- ### Analysis Requirements
     - Programming Language: Python
     - Libraries: numpy, nltk, transformers, textblob, torch
